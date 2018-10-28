@@ -1,2 +1,4 @@
+^data-raw$
+^LICENSE\.md$
 ^KnuSentiLexR\.Rproj$
 ^\.Rproj\.user$

@@ -6,9 +6,16 @@ Authors@R: person(given = "Chanyub",
              role = c("aut","cre"),
              email = "mrchypark@gmail.com",
              comment = c(ORCID = "0000-0001-6474-2570"))
-Description: Korean Sentiment Dictionary Packages
+Description: Korean Sentiment Dictionary Packages.
 License: CC0
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/mrchypark/KnuSentiLexR
 BugReports: https://github.com/mrchypark/KnuSentiLexR/issues
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.0
+Imports: 
+    tibble,
+    tokenizers,
+    purrr,
+    magrittr
