@@ -4,10 +4,10 @@ The goal of KnuSentiLexR is to ...
 
 ## Installation
 
-You can install the released version of KnuSentiLexR from [CRAN](https://CRAN.R-project.org) with:
+You can install the developing version of sendgridr from [Github](https://github.com/mrchypark/KnuSentiLexR) with:
 
 ``` r
-install.packages("KnuSentiLexR")
+remotes::install_github("mrchypark/KnuSentiLexR")
 ```
 
 ## Example

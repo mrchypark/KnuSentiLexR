@@ -10,7 +10,11 @@ download.file(tar, path)
 
 dic <- fromJSON(path) %>%
   as_tibble() %>%
-  mutate(polarity = as.numeric(polarity)) %>%
+  mutate(
+    polarity = as.numeric(polarity)
+    , ngram = stringr::str_count(word, " ") + 1
+    ) %>%
+  filter(ngram < 4) %>%
   select(word, polarity)
 
 use_data(dic, overwrite = T)

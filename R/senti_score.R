@@ -29,9 +29,14 @@ senti_magnitude <- function(sentences) {
 }
 
 token_ngram <- function(sentence){
-  tokenizers::tokenize_ngrams(sentence, n = stringr::str_count(sentence, " ") + 1, n_min = 1)[[1]]
+  n_max <- stringr::str_count(sentence, " ") + 1
+  if(n_max > 3){
+    n_max <- 3
+  }
+  tokenizers::tokenize_ngrams(sentence, n = n_max, n_min = 1)[[1]]
 }
 
+#' @importFrom utils data
 scoring <- function(word) {
   data(list = "dic", package = "KnuSentiLexR", envir = environment())
   dic[match(word, dic$word), "polarity"]
